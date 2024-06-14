@@ -10,17 +10,13 @@ body {
 }
 
 .container {
-    display: flex;
-    flex-direction: column; /* Расположение дочерних элементов в столбец */
-    justify-content: center; /* Выравнивание по центру по вертикали */
-    align-items: center; /* Выравнивание по центру по горизонтали */
-}
-
-/* Grid для контейнера */
-.container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* Три столбца равной ширины */
-    gap: 20px; /* Промежутки между элементами */
+    grid-template-columns: repeat(6, 1fr); /* Создание 6 колонок с равной шириной */
+    grid-gap: 20px; /* Расстояние между элементами */
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
 }
 
 /* Flexbox для расположения элементов внутри контейнера */
@@ -71,11 +67,8 @@ body {
 }
 
 .statement-link {
-    position: absolute;
-    bottom: 0%; /* Позиционируйте как вам нужно */
-    right: 2%; /* Подвиньте вправо */
-    z-index: 2; /* Убедитесь, что ссылка выше главного изображения */
-    transition: transform 0.3s; /* Плавный переход */
+    grid-column: 4; /* Картинка займет вторую колонку */
+    grid-row: 1; /* Картинка займет первую строку */
 }
 
 .statement-link:hover {
