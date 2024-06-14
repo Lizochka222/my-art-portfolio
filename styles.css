@@ -11,8 +11,8 @@ body {
 
 .container {
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     text-align: center;
 }
 
@@ -58,8 +58,8 @@ body {
 
 .statement-link {
     position: absolute;
-    bottom: 0px; /* Позиционируйте как вам нужно */
-    right: 500px; /* Подвиньте вправо */
+    bottom: 0%; /* Позиционируйте как вам нужно */
+    right: 30%; /* Подвиньте вправо */
     z-index: 2; /* Убедитесь, что ссылка выше главного изображения */
     transition: transform 0.3s; /* Плавный переход */
 }
