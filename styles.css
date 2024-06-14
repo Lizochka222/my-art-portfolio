@@ -10,10 +10,24 @@ body {
 }
 
 .container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
+    display: flex;
+    flex-direction: column; /* Расположение дочерних элементов в столбец */
+    justify-content: center; /* Выравнивание по центру по вертикали */
+    align-items: center; /* Выравнивание по центру по горизонтали */
+}
+
+/* Grid для контейнера */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Три столбца равной ширины */
+    gap: 20px; /* Промежутки между элементами */
+}
+
+/* Flexbox для расположения элементов внутри контейнера */
+.child-container {
+    display: flex;
+    justify-content: space-between; /* Равномерное распределение элементов по ширине контейнера */
+    align-items: center; /* Выравнивание по центру по вертикали */
 }
 
 .main-image {
