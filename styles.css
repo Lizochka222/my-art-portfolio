@@ -31,10 +31,10 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw; /* Занимает 100% ширины экрана */
+    height: 100vh; /* Занимает 100% высоты экрана */
     background-image: url('Комната с мольбертом, большая.png');
-    background-size: contain; /* измените на cover для полного покрытия экрана */
+    background-size: cover; /* Растягивает изображение, чтобы заполнить всю область */
     background-repeat: no-repeat;
     background-position: center;
 }
