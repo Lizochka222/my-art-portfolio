@@ -19,7 +19,7 @@ body {
 /* Grid для контейнера */
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Три столбца равной ширины */
+    grid-template-columns: repeat(6, 1fr); /* Три столбца равной ширины */
     gap: 20px; /* Промежутки между элементами */
 }
 
