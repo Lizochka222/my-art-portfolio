@@ -22,29 +22,53 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('Комната, большая_без мольберта.jpg');
+    background-image: url('Комната с мольбертом, большая.png');
     background-size: contain; /* измените на cover для полного покрытия экрана */
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.buttons {
+.overlay-link {
     position: absolute;
-    bottom: 50px;
+    bottom: 20px; /* Позиционируйте как вам нужно */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(calc(-50% - 7cm)) translateY(-3.5cm); /* Поднимите изображение на 3.5 см выше и сдвиньте влево на 7 см */
+    z-index: 1; /* Убедитесь, что ссылка выше главного изображения */
 }
 
-.button {
-    text-decoration: none;
-    color: white;
-    background-color: #007BFF;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+.bottom-image, .bottom-image-hover {
+    width: 600px; /* Увеличено в 1,5 раза, если ширина была 400px */
+    height: auto; /* Сохранить пропорции */
+    cursor: pointer;
+    position: absolute;
+    transition: opacity 0.3s;
 }
 
-.button:hover {
-    background-color: #0056b3;
+.bottom-image-hover {
+    opacity: 0;
+}
+
+.overlay-link:hover .bottom-image {
+    opacity: 0;
+}
+
+.overlay-link:hover .bottom-image-hover {
+    opacity: 1;
+}
+
+.statement-link {
+    position: absolute;
+    bottom: 0px; /* Позиционируйте как вам нужно */
+    right: 725px; /* Подвиньте вправо */
+    z-index: 2; /* Убедитесь, что ссылка выше главного изображения */
+    transition: transform 0.3s; /* Плавный переход */
+}
+
+.statement-link:hover {
+    transform: translateY(-0.3cm); /* Поднятие на 0.3 см при наведении */
+}
+
+.statement-image {
+    width: 200px; /* Задаем конкретный размер */
+    height: auto; /* Сохранить пропорции */
 }
