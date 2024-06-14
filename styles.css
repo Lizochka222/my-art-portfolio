@@ -10,13 +10,14 @@ body {
 }
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); /* Создание 6 колонок с равной шириной */
-    grid-gap: 20px; /* Расстояние между элементами */
-    position: center;
+    display: flex;
+    justify-content: space-between; /* Равномерное распределение пространства между элементами */
+    align-items: center; /* Выравнивание элементов по центру */
+    position: relative;
     width: 100%;
     height: 100vh;
-    text-align: center;
+    padding: 0 20px; /* Отступы по бокам */
+    box-sizing: border-box; /* Учитываем отступы в общей ширине */
 }
 
 /* Flexbox для расположения элементов внутри контейнера */
@@ -67,8 +68,8 @@ body {
 }
 
 .statement-link {
-    grid-column: 2; /* Картинка займет вторую колонку */
-    grid-row: 6; /* Картинка займет первую строку */
+    flex: 0 0 15%; /* Устанавливаем фиксированную ширину для элемента в 15% от ширины контейнера */
+    max-width: 15%; /* Ограничиваем максимальную ширину элемента */
 }
 
 .statement-link:hover {
